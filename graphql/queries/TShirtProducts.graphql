@@ -1,0 +1,20 @@
+query TShirtProducts {
+  products(
+    first: 12
+    channel: "default-channel"
+    filter: { search: "Banana" }
+  ) {
+    edges {
+      node {
+        id
+        name
+        thumbnail {
+          url
+        }
+        category {
+          name
+        }
+      }
+    }
+  }
+}
